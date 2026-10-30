@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy · Hot Mic</title>
+<meta name="description" content="How Hot Mic handles data: speech is processed entirely on the user's computer and is never uploaded.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='5' fill='%23141B26'/%3E%3Cg fill='none' stroke='%23C0A062' stroke-width='1.6' stroke-linecap='round'%3E%3Crect x='9' y='4' width='6' height='10' rx='3'/%3E%3Cpath d='M6 11a6 6 0 0 0 12 0M12 17v3'/%3E%3C/g%3E%3C/svg%3E">
+<!-- Hot Mic · Privacy Policy · © 2026 Malcolm Syme · mcsyme11@gmail.com -->
+<style>
+body{margin:0;background:#141B26;color:#EDE6D3;font-family:Georgia,'Times New Roman',serif}
+a{color:#E2C88E}a:hover{color:#EDE6D3}
+a:focus-visible{outline:2px solid #EDE6D3;outline-offset:3px}
+.bar{border-bottom:1px solid #2A3446;background:#0F1520}
+.wrap{max-width:780px;margin:0 auto;padding:0 24px}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+.brand{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.32em;color:#C0A062;text-decoration:none}
+.eyebrow{font-size:13px;letter-spacing:.32em;color:#C0A062;margin-top:72px}
+h1{font-weight:normal;font-size:46px;line-height:1.1;margin:12px 0 10px}
+.meta{font-style:italic;color:#98A0AB;font-size:15px;margin:0 0 40px}
+.summary{background:#1A2333;border-top:1px solid #C0A062;border-radius:6px;padding:24px 28px;margin-bottom:44px}
+.summary p{margin:0;font-size:18px;line-height:1.6;color:#EDE6D3}
+h2{font-weight:normal;font-size:26px;margin:44px 0 12px;padding-top:20px;border-top:1px solid #2A3446}
+p,li{font-size:17px;line-height:1.7;color:#B4AFA2}
+li{margin-bottom:8px}
+strong{color:#EDE6D3;font-weight:normal}
+.foot{border-top:1px solid #2A3446;background:#0F1520;margin-top:88px}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding:30px 24px;font-size:14px;color:#98A0AB}
+.foot nav{display:flex;flex-wrap:wrap;gap:18px}
+@media (max-width:600px){h1{font-size:36px}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap top">
+    <a class="brand" href="./">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C0A062" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg>
+      HOT MIC
+    </a>
+    <a href="./" style="font-size:15px;text-decoration:none">Download</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="eyebrow">LEGAL</div>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective October 30, 2026</p>
+
+  <div class="summary">
+    <p>Hot Mic processes speech entirely on the user's own computer. Audio and dictated text are never uploaded, sold or shared. Hot Mic has no accounts, no analytics and no advertising.</p>
+  </div>
+
+  <p>This policy explains what information Hot Mic, the Windows dictation application developed by Malcolm Syme ("the developer"), handles, and how. It also covers this download website.</p>
+
+  <h2>1. Speech and dictated text</h2>
+  <ul>
+    <li><strong>On-device processing.</strong> Speech recognition (NVIDIA Parakeet and, where a suitable graphics card is present, OpenAI Whisper) and text cleanup (SpeakoFlow Mini) run locally on the computer. No audio or text is sent to the developer or to any other party.</li>
+    <li><strong>No storage by default.</strong> Recordings are held in memory only while they are being processed and are then discarded.</li>
+    <li><strong>Optional test recordings.</strong> If the user turns on <em>Keep test recordings</em> (Settings › Advanced, off by default), the last 20 dictations (audio and resulting text) are stored on the computer to help diagnose recognition problems. They are never transmitted and can be deleted at any time from the same screen.</li>
+  </ul>
+
+  <h2>2. Information stored on the computer</h2>
+  <ul>
+    <li><strong>Settings</strong>, including the user's custom words, are stored in <code>%APPDATA%\HotMic</code>.</li>
+    <li><strong>AI models and a log file</strong> are stored in <code>%LOCALAPPDATA%\HotMic</code>. The log records technical events (for example, timings and microphone levels) and never contains dictated text unless the user turns on the <em>Detailed log</em> option for troubleshooting.</li>
+    <li>This information remains on the computer. Uninstalling Hot Mic removes the application; settings and models may be deleted manually from the folders above.</li>
+  </ul>
+
+  <h2>3. Network connections</h2>
+  <p>Hot Mic connects to the internet only for the following purposes:</p>
+  <ul>
+    <li><strong>Downloading the AI models</strong> once, from Hugging Face (huggingface.co), when they are first needed or when the user requests a repair.</li>
+    <li><strong>Checking for updates</strong> (installed copies only), from GitHub (github.com), at most every 12 hours. These requests contain no personal information.</li>
+  </ul>
+  <p>Like any internet request, these connections reveal the computer's IP address and basic technical details (such as the application name and version) to the service contacted. Those services handle such data under their own privacy policies: <a href="https://huggingface.co/privacy">Hugging Face</a> and <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>.</p>
+
+  <h2>4. Windows components</h2>
+  <p>Hot Mic uses components built into Windows, including Microsoft Edge WebView2 (to display its settings windows) and Microsoft Defender SmartScreen (which checks downloaded files). These components are operated by Microsoft and are subject to the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.</p>
+
+  <h2>5. This website</h2>
+  <p>This website is hosted by GitHub Pages. It uses no cookies, analytics or tracking scripts. GitHub may log visitors' IP addresses for security purposes, as described in the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
+  <h2>6. Children</h2>
+  <p>Hot Mic does not knowingly collect information from anyone, including children, because it does not collect personal information at all.</p>
+
+  <h2>7. Changes to this policy</h2>
+  <p>If this policy changes, the updated version will be published on this page with a new effective date. Material changes will also be noted in the release notes.</p>
+
+  <h2>8. Contact</h2>
+  <p>Questions about this policy may be sent to Malcolm Syme at <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a>.</p>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Hot Mic © 2026 Malcolm Syme · <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a></span>
+    <nav aria-label="Legal">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="terms.html">Terms of Use</a>
+      <a href="https://github.com/mcsyme11-byte/HotMic-releases/blob/main/THIRD-PARTY-NOTICES.md">Third-party notices</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
