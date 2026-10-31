@@ -51,7 +51,7 @@ strong{color:#EDE6D3;font-weight:normal}
     <p>Hot Mic processes speech entirely on the user's own computer. Audio and dictated text are never uploaded, sold or shared. Hot Mic has no accounts, no analytics and no advertising.</p>
   </div>
 
-  <p>This policy explains what information Hot Mic, the Windows dictation application developed by Malcolm Syme ("the developer"), handles, and how. It also covers this download website.</p>
+  <p>This policy explains what information Hot Mic, the dictation application for Windows and Mac developed by Malcolm Syme ("the developer"), handles, and how. It also covers this download website.</p>
 
   <h2>1. Speech and dictated text</h2>
   <ul>
@@ -62,8 +62,9 @@ strong{color:#EDE6D3;font-weight:normal}
 
   <h2>2. Information stored on the computer</h2>
   <ul>
-    <li><strong>Settings</strong>, including the user's custom words, are stored in <code>%APPDATA%\HotMic</code>.</li>
-    <li><strong>AI models and a log file</strong> are stored in <code>%LOCALAPPDATA%\HotMic</code>. The log records technical events (for example, timings and microphone levels) and never contains dictated text unless the user turns on the <em>Detailed log</em> option for troubleshooting.</li>
+    <li><strong>On Windows,</strong> settings (including the user's custom words) are stored in <code>%APPDATA%\HotMic</code>, and the AI models and a log file in <code>%LOCALAPPDATA%\HotMic</code>.</li>
+    <li><strong>On a Mac,</strong> settings, the AI models and the log file are stored in <code>~/Library/Application Support/HotMic</code>.</li>
+    <li><strong>The log</strong> records technical events (for example, timings and microphone levels) and never contains dictated text unless the user turns on the <em>Detailed log</em> option for troubleshooting.</li>
     <li>This information remains on the computer. Uninstalling Hot Mic removes the application; settings and models may be deleted manually from the folders above.</li>
   </ul>
 
@@ -71,12 +72,13 @@ strong{color:#EDE6D3;font-weight:normal}
   <p>Hot Mic connects to the internet only for the following purposes:</p>
   <ul>
     <li><strong>Downloading the AI models</strong> once, from Hugging Face (huggingface.co), when they are first needed or when the user requests a repair.</li>
-    <li><strong>Checking for updates</strong> (installed copies only), from GitHub (github.com), at most every 12 hours. These requests contain no personal information.</li>
+    <li><strong>Checking for updates</strong> (installed copies on Windows only), from GitHub (github.com), at most every 12 hours. These requests contain no personal information. The Mac test version does not check for updates.</li>
   </ul>
   <p>Like any internet request, these connections reveal the computer's IP address and basic technical details (such as the application name and version) to the service contacted. Those services handle such data under their own privacy policies: <a href="https://huggingface.co/privacy">Hugging Face</a> and <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>.</p>
 
-  <h2>4. Windows components</h2>
-  <p>Hot Mic uses components built into Windows, including Microsoft Edge WebView2 (to display its settings windows) and Microsoft Defender SmartScreen (which checks downloaded files). These components are operated by Microsoft and are subject to the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.</p>
+  <h2>4. Operating system components</h2>
+  <p>On Windows, Hot Mic uses components built into Windows, including Microsoft Edge WebView2 (to display its settings windows) and Microsoft Defender SmartScreen (which checks downloaded files). These components are operated by Microsoft and are subject to the <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.</p>
+  <p>On a Mac, Hot Mic uses macOS's own clipboard, sound and voice functions, and macOS's permission system (Microphone and Accessibility), which the user controls in System Settings › Privacy &amp; Security. These are subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</p>
 
   <h2>5. This website</h2>
   <p>This website is hosted by GitHub Pages. It uses no cookies, analytics or tracking scripts. GitHub may log visitors' IP addresses for security purposes, as described in the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>

@@ -1,6 +1,6 @@
 # Hot Mic
 
-**Free, private dictation for Windows.** Press **F9**, speak, and press **F9** again: clean, punctuated text appears at the cursor in any application, including Microsoft Word, web browsers, Discord and email.
+**Free, private dictation for Windows, with a Mac test version.** Press **F9** (on a Mac, **right ⌥ Option**), speak, and press it again: clean, punctuated text appears at the cursor in any application, including Microsoft Word, web browsers, Discord and email.
 
 Speech is processed entirely on the computer. Hot Mic needs no account and no subscription, and it contains no tracking.
 
@@ -34,6 +34,15 @@ Speech is processed entirely on the computer. Hot Mic needs no account and no su
 | **HotMic-Setup.exe** | The recommended installer. It installs Hot Mic for the current Windows user (no administrator rights required), adds Start menu and desktop shortcuts, and registers Hot Mic in Settings › Apps for uninstalling. Installed copies update automatically. |
 | **HotMic.exe** | The complete application as a single file, for use without installation. This version does not update automatically. |
 | `HotMicApp-*.nupkg`, `releases.win.json` | Update packages used by installed copies of Hot Mic. They do not need to be downloaded manually. |
+
+## Mac (test version)
+
+**[Download Hot Mic for Mac (test version)](https://github.com/mcsyme11-byte/HotMic-releases/releases/download/mac-preview/HotMic-Mac.dmg)** · [Release notes and known limits](https://github.com/mcsyme11-byte/HotMic-releases/releases/tag/mac-preview)
+
+- Requires a Mac with Apple silicon (M1 or later) and macOS 14 Sonoma or later.
+- Press **right ⌥ Option** to start and stop dictating.
+- Hot Mic for Mac is free and not yet registered with Apple, so macOS asks for confirmation the first time it is opened (System Settings › Privacy & Security › **Open Anyway**). The [website](https://mcsyme11-byte.github.io/HotMic-releases/#mac) shows each step.
+- The test version has no Settings window yet and does not update automatically.
 
 ## System requirements
 
