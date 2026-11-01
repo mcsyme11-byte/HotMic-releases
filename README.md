@@ -68,6 +68,10 @@ Audio and dictated text never leave the computer. Hot Mic connects to the intern
 
 See the full [Privacy Policy](https://mcsyme11-byte.github.io/HotMic-releases/privacy.html).
 
+## Settings
+
+Hot Mic works well with its default settings. The [Settings Guide](https://mcsyme11-byte.github.io/HotMic-releases/settings-guide.html) explains each setting and suggests the best settings for gaming PCs, laptops, Bluetooth headsets and low vision.
+
 ## Terms and licences
 
 Hot Mic is free to download and use, and is provided as is, without warranty. See the [Terms of Use](https://mcsyme11-byte.github.io/HotMic-releases/terms.html).
