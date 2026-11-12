@@ -118,6 +118,8 @@ kbd{font-family:inherit;color:#EDE6D3;border:1px solid #3A465C;border-radius:3px
         <li><strong>Microphone:</strong> choose the headset by name (Advanced), rather than Windows default.</li>
         <li><strong>Whisper for muffled mics:</strong> on (needs a graphics card). It is a second, stronger listener for muffled sound.</li>
         <li><strong>My words:</strong> add names that are often misheard.</li>
+        <li><strong>Talk after the start sound.</strong> A headset can take a moment to switch its microphone on. Hot Mic waits for it, showing “Mic starting”, and plays the start sound once the microphone hears.</li>
+        <li><strong>Keep the mic ready:</strong> leave off. It would keep the headset in call mode, which makes music and game sound worse.</li>
       </ul>
     </section>
     <section class="setup">
@@ -202,13 +204,14 @@ kbd{font-family:inherit;color:#EDE6D3;border:1px solid #3A465C;border-radius:3px
   <section class="tab" aria-labelledby="t-words">
     <h3 id="t-words">My words</h3>
     <div class="opt head"><div>SETTING</div><div>WHAT IT DOES</div><div>DEFAULT</div></div>
-    <div class="opt"><div class="name">When I say → Type this</div><div class="what">Spells names and terms the user's way every time. For example, “see zed e g” → “CZEG”.</div><div class="def">Empty</div></div>
+    <div class="opt"><div class="name">When I say → Type this</div><div class="what">Spells names and terms the user's way every time. For example, “see zed e g” → “CZEG”. Near misses are caught too: “c.z.e.g”, “C Z E G”, “vpilot” or “VPilot”. Everyday words are never changed, so an entry for “Will” doesn't touch “I will”.</div><div class="def">Empty</div></div>
   </section>
 
   <section class="tab" aria-labelledby="t-advanced">
     <h3 id="t-advanced">Advanced</h3>
     <div class="opt head"><div>SETTING</div><div>WHAT IT DOES</div><div>DEFAULT</div></div>
     <div class="opt"><div class="name">Microphone</div><div class="what">Which microphone to use.</div><div class="def">Windows default</div></div>
+    <div class="opt"><div class="name">Keep the mic ready</div><div class="what">For a wired, USB or built-in microphone, if the first word is sometimes missed. The microphone stays on between dictations, keeping only the last half second in memory (never saved), so a word said at the same moment as the key is kept. Windows shows its microphone icon the whole time. Not for Bluetooth headphones: it keeps them in call mode, which makes music and game sound worse.</div><div class="def">Off</div></div>
     <div class="opt"><div class="name">Typing the text in</div><div class="what"><strong>Paste</strong> is fast, and the clipboard is put back afterwards. <strong>Type letter by letter</strong> is for apps that block pasting.</div><div class="def">Paste</div></div>
     <div class="opt"><div class="name">How much of the PC to use</div><div class="what"><strong>Automatic</strong> steps down while a game or simulator is running, so it comes first. <strong>Lightest</strong> always uses the least. <strong>Best quality</strong> always uses everything.</div><div class="def">Automatic</div></div>
     <div class="opt"><div class="name">Whisper for muffled mics</div><div class="what">A second, stronger listener for muffled microphones and unclear dictations. Needs a graphics card; it steps aside during games.</div><div class="def">On</div></div>
@@ -222,6 +225,8 @@ kbd{font-family:inherit;color:#EDE6D3;border:1px solid #3A465C;border-radius:3px
   <h2 id="tips">If something isn't right</h2>
   <ul>
     <li><strong>The text was left on the clipboard</strong> (a message says to press <kbd>Ctrl</kbd>+<kbd>V</kbd>): the app didn't accept the paste in time, or another window was in front. Pressing <kbd>Ctrl</kbd>+<kbd>V</kbd> pastes it. If it happens often, the log (Advanced › Log folder) records the reason.</li>
+    <li><strong>The first word is missed:</strong> start talking after the start sound. On a wired, USB or built-in microphone, <strong>Keep the mic ready</strong> (Advanced) keeps a word said at the same moment as the key.</li>
+    <li><strong>The last word is cut off:</strong> Hot Mic keeps listening a moment after the key, and longer while you're still talking, so this should be rare. If it happens, wait a beat before pressing the key.</li>
     <li><strong>Words are misheard:</strong> check the right microphone is chosen, add names to <strong>My words</strong>, and for a Bluetooth headset turn on <strong>Whisper</strong>.</li>
     <li><strong>It feels slow:</strong> leave <strong>Skip the AI when there's nothing to fix</strong> on. On a laptop, also try <strong>Basic cleanup for very long dictations</strong>, or <strong>Basic</strong> cleanup for everything.</li>
     <li><strong>A game or simulator stutters:</strong> keep Performance on <strong>Automatic</strong> or choose <strong>Lightest</strong>.</li>

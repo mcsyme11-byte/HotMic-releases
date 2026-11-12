@@ -71,7 +71,7 @@ strong{color:#EDE6D3;font-weight:normal}
   <h2>3. Network connections</h2>
   <p>Hot Mic connects to the internet only for the following purposes:</p>
   <ul>
-    <li><strong>Downloading the AI models</strong> once, from Hugging Face (huggingface.co), when they are first needed or when the user requests a repair.</li>
+    <li><strong>Downloading the AI models</strong> once, from Hugging Face (huggingface.co), when they are first needed, when the user requests a repair, or when an update replaces a model with a better one (for example, version 0.5.6 fetches a more accurate English speech model in the background).</li>
     <li><strong>Checking for updates</strong> (installed copies on Windows only), from GitHub (github.com), at most every 12 hours. These requests contain no personal information. The Mac test version does not check for updates.</li>
   </ul>
   <p>Like any internet request, these connections reveal the computer's IP address and basic technical details (such as the application name and version) to the service contacted. Those services handle such data under their own privacy policies: <a href="https://huggingface.co/privacy">Hugging Face</a> and <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>.</p>
