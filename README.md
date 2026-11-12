@@ -74,7 +74,7 @@ Hot Mic works well with its default settings. The [Settings Guide](https://mcsym
 
 ## Terms and licences
 
-Hot Mic is free to download and use, and is provided as is, without warranty. See the [Terms of Use](https://mcsyme11-byte.github.io/HotMic-releases/terms.html).
+Hot Mic is free to download and use, and is provided as is, without warranty. See the [Terms of Use](https://mcsyme11-byte.github.io/HotMic-releases/terms.html). All the legal documents are on the [Legal](https://mcsyme11-byte.github.io/HotMic-releases/legal.html) page.
 
 Hot Mic is built on open-source software and AI models, each under its own licence. See [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 

@@ -14,7 +14,7 @@ a{color:#E2C88E}a:hover{color:#EDE6D3}
 a:focus-visible{outline:2px solid #EDE6D3;outline-offset:3px}
 .bar{border-bottom:1px solid #2A3446;background:#0F1520}
 .wrap{max-width:780px;margin:0 auto;padding:0 24px}
-.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px}
 .brand{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.32em;color:#C0A062;text-decoration:none}
 .eyebrow{font-size:13px;letter-spacing:.32em;color:#C0A062;margin-top:72px}
 h1{font-weight:normal;font-size:46px;line-height:1.1;margin:12px 0 10px}
@@ -30,6 +30,8 @@ strong{color:#EDE6D3;font-weight:normal}
 .foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding:30px 24px;font-size:14px;color:#98A0AB}
 .foot nav{display:flex;flex-wrap:wrap;gap:18px}
 @media (max-width:600px){h1{font-size:36px}}
+.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:28px;font-size:16px;text-decoration:none}
+.back + .eyebrow{margin-top:28px}
 </style>
 </head>
 <body>
@@ -44,6 +46,7 @@ strong{color:#EDE6D3;font-weight:normal}
 </header>
 
 <main class="wrap">
+  <a class="back" href="legal.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>Back to Legal</a>
   <div class="eyebrow">LEGAL</div>
   <h1>Terms of Use</h1>
   <p class="meta">Effective October 30, 2026</p>
@@ -97,11 +100,9 @@ strong{color:#EDE6D3;font-weight:normal}
 <footer class="foot">
   <div class="wrap">
     <span>Hot Mic © 2026 Malcolm Syme · <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a></span>
-    <nav aria-label="Legal">
-      <a href="settings-guide.html">Settings Guide</a>
-      <a href="privacy.html">Privacy</a>
-      <a href="terms.html" aria-current="page">Terms of Use</a>
-      <a href="https://github.com/mcsyme11-byte/HotMic-releases/blob/main/THIRD-PARTY-NOTICES.md">Third-party notices</a>
+    <nav aria-label="More">
+      <a href="settings-guide.html">Settings guide</a>
+      <a href="legal.html">Legal</a>
     </nav>
   </div>
 </footer>

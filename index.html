@@ -21,6 +21,42 @@ a:focus-visible,button:focus-visible{outline:2px solid #EDE6D3;outline-offset:3p
   h2{font-size:30px !important}
 }
 @media (prefers-reduced-motion: reduce) { html{scroll-behavior:auto} }
+/* Installing: one layout for Windows and Mac */
+.tabs{display:flex;flex-wrap:wrap;gap:10px}
+.tab{font:inherit;font-size:17px;letter-spacing:.06em;min-height:48px;padding:10px 26px;border-radius:3px;border:1px solid #3A465C;background:transparent;color:#B4AFA2;cursor:pointer}
+.tab:hover{border-color:#E2C88E;color:#EDE6D3}
+.tab[aria-selected="true"]{background:#C0A062;border-color:#C0A062;color:#141B26}
+.tab-note{font-size:13px;font-style:italic;letter-spacing:0}
+.js .panel[hidden]{display:none}
+.panel{display:flex;flex-direction:column;gap:16px}
+.panel-title{margin:0;font-weight:normal;font-size:15px;letter-spacing:.24em;text-transform:uppercase;color:#C0A062}
+.panel + .panel{margin-top:24px}
+.js .panel + .panel{margin-top:0}
+.steps{display:flex;flex-direction:column;gap:16px}
+.step{background:#1A2333;border-top:1px solid #C0A062;border-radius:6px;padding:26px;display:flex;flex-direction:column;gap:14px}
+.step.has-shot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,400px);gap:20px 32px;align-items:center}
+.step .text{display:flex;flex-direction:column;gap:14px}
+.step-head{display:flex;gap:14px;align-items:baseline}
+.step .num{font-size:30px;color:#C0A062;line-height:1}
+.step h4{margin:0;font-weight:normal;font-size:21px;color:#EDE6D3}
+.step p,.step li,.card li{margin:0;font-size:16px;line-height:1.6;color:#B4AFA2}
+.step b,.card b{color:#EDE6D3;font-weight:normal}
+.step p.why{font-size:14.5px;font-style:italic;color:#98A0AB}
+.sub{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:6px}
+.key{color:#EDE6D3;border:1px solid #3A465C;border-radius:3px;padding:1px 8px;white-space:nowrap}
+.shot{border-radius:6px;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.shot.win{background:#0067C0;color:#FFFFFF;font-family:'Segoe UI',system-ui,sans-serif}
+.shot.mac{background:#ECECEC;color:#1D1D1F;font-family:-apple-system,'Helvetica Neue',sans-serif}
+.card{flex:1 1 440px;background:#1A2333;border-top:1px solid #C0A062;border-radius:6px;padding:28px;display:flex;flex-direction:column;gap:14px}
+.card .eyebrow{font-size:13px;letter-spacing:.32em;color:#C0A062}
+.card ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:10px}
+@media (max-width: 820px) {
+  .step.has-shot{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width: 600px) {
+  .step{padding:22px}
+  .card{padding:22px}
+}
 </style>
 </head>
 <body>
@@ -37,7 +73,6 @@ a:focus-visible,button:focus-visible{outline:2px solid #EDE6D3;outline-offset:3p
       <nav aria-label="Page" style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 15px">
         <a href="#how" style="text-decoration: none">How it works</a>
         <a href="#install" style="text-decoration: none">Installing</a>
-        <a href="#mac" style="text-decoration: none">Installing on a Mac</a>
         <a href="settings-guide.html" style="text-decoration: none">Settings guide</a>
         <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases" style="text-decoration: none">All versions</a>
       </nav>
@@ -69,7 +104,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #EDE6D3;outline-offset:3p
         </span>
       </a>
     </div>
-    <div style="font-size: 14px; color: #98A0AB; font-style: italic">Windows version 0.5.6 · <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/latest">what’s new</a> · Mac: <a href="#mac">first-time steps</a> (Apple menu › About This Mac shows the chip)</div>
+    <div style="font-size: 14px; color: #98A0AB; font-style: italic">Windows version 0.5.6 · <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/latest">What’s new</a> · <a href="#install">How to install</a></div>
 
     <!-- The indicator, as people will see it -->
     <div style="margin-top: 34px; display: flex; flex-direction: column; align-items: center; gap: 12px">
@@ -160,122 +195,114 @@ a:focus-visible,button:focus-visible{outline:2px solid #EDE6D3;outline-offset:3p
     </div>
   </section>
 
-  <!-- Installing -->
-  <section id="install" style="max-width: 1080px; margin: 0 auto; padding: 72px 24px 40px; display: flex; flex-direction: column; gap: 32px">
+  <!-- Installing: the same four steps on Windows and Mac -->
+  <section id="install" style="max-width: 1080px; margin: 0 auto; padding: 72px 24px 40px; display: flex; flex-direction: column; gap: 28px">
+    <span id="mac"></span>
     <div style="display: flex; flex-direction: column; gap: 10px">
       <div style="font-size: 13px; letter-spacing: 0.32em; color: #C0A062">INSTALLING</div>
-      <h2 style="margin: 0; font-weight: normal; font-size: 38px">Simple installation, with no administrator rights required.</h2>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
-      <ol style="flex: 1 1 400px; margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 22px">
-        <li style="display: flex; gap: 16px">
-          <span style="flex: none; width: 34px; height: 34px; border: 1px solid #7E6A45; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C0A062">1</span>
-          <span style="font-size: 17px; line-height: 1.6; color: #B4AFA2"><span style="color: #EDE6D3">Open HotMic-Setup.exe</span> from the Downloads folder.</span>
-        </li>
-        <li style="display: flex; gap: 16px">
-          <span style="flex: none; width: 34px; height: 34px; border: 1px solid #7E6A45; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C0A062">2</span>
-          <span style="font-size: 17px; line-height: 1.6; color: #B4AFA2"><span style="color: #EDE6D3">If Windows displays a blue warning,</span> select <span style="color: #EDE6D3">More info</span>, then <span style="color: #EDE6D3">Run anyway</span>. The warning appears because Hot Mic is new and is not yet signed with a commercial code-signing certificate; it does not indicate a problem with the software.</span>
-        </li>
-        <li style="display: flex; gap: 16px">
-          <span style="flex: none; width: 34px; height: 34px; border: 1px solid #7E6A45; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #C0A062">3</span>
-          <span style="font-size: 17px; line-height: 1.6; color: #B4AFA2"><span style="color: #EDE6D3">Select Download</span> in the Welcome window. The free AI models (about 1.3 GB) are downloaded once. Hot Mic is then ready to use and keeps itself up to date.</span>
-        </li>
-      </ol>
-
-      <!-- What the Windows warning looks like -->
-      <figure style="flex: 1 1 400px; margin: 0; display: flex; flex-direction: column; gap: 10px">
-        <div style="background: #0067C0; color: #FFFFFF; font-family: 'Segoe UI', system-ui, sans-serif; border-radius: 4px; padding: 26px 28px 22px; display: flex; flex-direction: column; gap: 12px">
-          <div style="font-size: 26px; font-weight: 300">Windows protected your PC</div>
-          <div style="font-size: 13.5px; line-height: 1.5">Microsoft Defender SmartScreen prevented an unrecognized app from starting.</div>
-          <div style="font-size: 13.5px; text-decoration: underline; outline: 2px solid #E2C88E; outline-offset: 4px; align-self: flex-start">More info</div>
-          <div style="font-size: 13.5px; line-height: 1.5">App: HotMic-Setup.exe<br>Publisher: Unknown publisher</div>
-          <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px">
-            <span style="background: #FFFFFF; color: #000000; font-size: 13.5px; padding: 7px 18px; outline: 2px solid #E2C88E; outline-offset: 3px">Run anyway</span>
-            <span style="background: #FFFFFF; color: #000000; font-size: 13.5px; padding: 7px 18px">Don’t run</span>
-          </div>
-        </div>
-        <figcaption style="font-size: 14px; color: #98A0AB; font-style: italic">The Windows SmartScreen warning, with the two required selections outlined.</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <!-- Installing on a Mac -->
-  <section id="mac" style="max-width: 1080px; margin: 0 auto; padding: 72px 24px 40px; display: flex; flex-direction: column; gap: 32px">
-    <div style="display: flex; flex-direction: column; gap: 10px">
-      <div style="font-size: 13px; letter-spacing: 0.32em; color: #C0A062">INSTALLING ON A MAC · TEST VERSION</div>
-      <h2 style="margin: 0; font-weight: normal; font-size: 38px">Four steps, the first time only.</h2>
-      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B4AFA2; max-width: 760px">Hot Mic is free and is not yet registered with Apple, so macOS asks for confirmation the first time it is opened. After that, it opens normally.</p>
+      <h2 style="margin: 0; font-weight: normal; font-size: 38px">Ready in four steps.</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.6; color: #B4AFA2; max-width: 760px">The same four steps on Windows and on a Mac. Steps 1 to 3 are only needed once; after that, it’s just step 4. No administrator rights are required.</p>
     </div>
 
-    <div style="display: flex; flex-wrap: wrap; gap: 20px">
-      <!-- Step 1 -->
-      <div style="flex: 1 1 460px; background: #1A2333; border-top: 1px solid #C0A062; border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 14px">
-        <div style="display: flex; gap: 14px; align-items: baseline"><span style="font-size: 30px; color: #C0A062">1</span><h3 style="margin: 0; font-weight: normal; font-size: 21px">Copy Hot Mic to Applications</h3></div>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4AFA2">Open the downloaded <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/download/mac-preview/HotMic-Mac.dmg">HotMic-Mac.dmg</a> and drag <span style="color: #EDE6D3">Hot Mic</span> onto the <span style="color: #EDE6D3">Applications</span> folder.</p>
-      </div>
-      <!-- Step 2 -->
-      <div style="flex: 1 1 460px; background: #1A2333; border-top: 1px solid #C0A062; border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 14px">
-        <div style="display: flex; gap: 14px; align-items: baseline"><span style="font-size: 30px; color: #C0A062">2</span><h3 style="margin: 0; font-weight: normal; font-size: 21px">Open it once, then select Done</h3></div>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4AFA2">Open Hot Mic from Applications. macOS shows a message that it could not verify the app. Select <span style="color: #EDE6D3">Done</span>. This is expected for apps that are not registered with Apple.</p>
-        <!-- Drawn macOS message -->
-        <div aria-hidden="true" style="align-self: center; width: 280px; max-width: 100%; box-sizing: border-box; background: #ECECEC; color: #1D1D1F; border-radius: 12px; padding: 18px 18px 14px; font-family: -apple-system, 'Helvetica Neue', sans-serif; display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center">
-          <div style="width: 44px; height: 44px; border-radius: 10px; background: #141B26; display: flex; align-items: center; justify-content: center"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#C0A062" stroke-width="1.6" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"></rect><path d="M5 11a7 7 0 0 0 14 0"></path><path d="M12 18v3"></path></svg></div>
-          <div style="font-size: 13px; font-weight: 700">“Hot Mic” Not Opened</div>
-          <div style="font-size: 11px; line-height: 1.4">Apple could not verify “Hot Mic” is free of malware that may harm your Mac or compromise your privacy.</div>
-          <div style="display: flex; flex-direction: column; gap: 6px; width: 100%; margin-top: 4px">
-            <span style="background: #0A7AFF; color: #FFFFFF; border-radius: 6px; padding: 5px; font-size: 12px; outline: 2px solid #C0A062; outline-offset: 2px">Done</span>
-            <span style="background: #DCDCDC; border-radius: 6px; padding: 5px; font-size: 12px">Move to Trash</span>
+    <div class="tabs" role="tablist" aria-label="Choose your computer">
+      <button class="tab" role="tab" id="tab-win" aria-controls="panel-win" aria-selected="true">Windows</button>
+      <button class="tab" role="tab" id="tab-mac" aria-controls="panel-mac" aria-selected="false">Mac <span class="tab-note">test version</span></button>
+    </div>
+
+    <!-- Windows -->
+    <div class="panel" id="panel-win" role="tabpanel" aria-labelledby="tab-win">
+      <h3 class="panel-title">Windows 10 and 11</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-head"><span class="num">1</span><h4>Download Hot Mic</h4></div>
+          <p>Select <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/latest/download/HotMic-Setup.exe">Download for Windows</a>, then open <b>HotMic-Setup.exe</b> from your Downloads folder.</p>
+        </div>
+        <div class="step has-shot">
+          <div class="text">
+            <div class="step-head"><span class="num">2</span><h4>Allow it to open</h4></div>
+            <p>Windows may say it protected your PC. Select <b>More info</b>, then <b>Run anyway</b>.</p>
+            <p class="why">This message appears because Hot Mic is new and not yet code-signed. It doesn’t mean anything is wrong.</p>
+          </div>
+          <div aria-hidden="true" class="shot win">
+            <div style="font-size: 22px; font-weight: 300">Windows protected your PC</div>
+            <div style="font-size: 12.5px; line-height: 1.5">Microsoft Defender SmartScreen prevented an unrecognized app from starting.</div>
+            <div style="font-size: 12.5px; text-decoration: underline; outline: 2px solid #E2C88E; outline-offset: 4px; align-self: flex-start">More info</div>
+            <div style="display: flex; justify-content: flex-end; gap: 10px">
+              <span style="background: #FFFFFF; color: #000000; font-size: 12.5px; padding: 6px 16px; outline: 2px solid #E2C88E; outline-offset: 3px">Run anyway</span>
+              <span style="background: #FFFFFF; color: #000000; font-size: 12.5px; padding: 6px 16px">Don’t run</span>
+            </div>
           </div>
         </div>
-      </div>
-      <!-- Step 3 -->
-      <div style="flex: 1 1 460px; background: #1A2333; border-top: 1px solid #C0A062; border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 14px">
-        <div style="display: flex; gap: 14px; align-items: baseline"><span style="font-size: 30px; color: #C0A062">3</span><h3 style="margin: 0; font-weight: normal; font-size: 21px">Allow it in System Settings</h3></div>
-        <ol style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px; line-height: 1.6; color: #B4AFA2">
-          <li>Open the <span style="color: #EDE6D3">Apple menu › System Settings › Privacy &amp; Security</span>.</li>
-          <li>Scroll down to <span style="color: #EDE6D3">Security</span>. Next to “Hot Mic” was blocked, select <span style="color: #EDE6D3">Open Anyway</span>. The button appears for about an hour after step 2.</li>
-          <li>Enter your Mac password, then select <span style="color: #EDE6D3">Open Anyway</span> once more.</li>
-        </ol>
-        <!-- Drawn Settings row -->
-        <div aria-hidden="true" style="background: #ECECEC; color: #1D1D1F; border-radius: 10px; padding: 14px 16px; font-family: -apple-system, 'Helvetica Neue', sans-serif; display: flex; flex-direction: column; gap: 8px">
-          <div style="font-size: 12px; font-weight: 700; color: #6E6E73">Security</div>
-          <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #FFFFFF; border-radius: 8px; padding: 10px 12px">
-            <span style="font-size: 12px">“Hot Mic” was blocked to protect your Mac.</span>
-            <span style="background: #FFFFFF; border: 1px solid #C7C7CC; border-radius: 6px; padding: 4px 10px; font-size: 12px; white-space: nowrap; outline: 2px solid #C0A062; outline-offset: 2px">Open Anyway</span>
-          </div>
+        <div class="step">
+          <div class="step-head"><span class="num">3</span><h4>Finish in the Welcome window</h4></div>
+          <p>Select <b>Download</b>. The free AI models (about 1.3 GB) download once.</p>
+        </div>
+        <div class="step">
+          <div class="step-head"><span class="num">4</span><h4>Start dictating</h4></div>
+          <p>Place the cursor in any app, press <span class="key">F9</span>, speak, and press <span class="key">F9</span> again.</p>
+          <p class="why">Hot Mic keeps itself up to date.</p>
         </div>
       </div>
-      <!-- Step 4 -->
-      <div style="flex: 1 1 460px; background: #1A2333; border-top: 1px solid #C0A062; border-radius: 6px; padding: 26px; display: flex; flex-direction: column; gap: 14px">
-        <div style="display: flex; gap: 14px; align-items: baseline"><span style="font-size: 30px; color: #C0A062">4</span><h3 style="margin: 0; font-weight: normal; font-size: 21px">Give Hot Mic its two permissions</h3></div>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4AFA2">Hot Mic's Welcome window guides you through both, one at a time:</p>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; font-size: 16px; line-height: 1.6; color: #B4AFA2">
-          <li><span style="color: #EDE6D3">Microphone</span>: select Allow when macOS asks.</li>
-          <li><span style="color: #EDE6D3">Accessibility</span>: lets Hot Mic notice its key and type text. Turn on the switch next to Hot Mic in Privacy &amp; Security › Accessibility.</li>
-        </ul>
-        <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4AFA2">The AI models then download once (about 1.3 GB). Press <span style="color: #EDE6D3; white-space: nowrap">right ⌥ Option</span> in any app to start dictating.</p>
+    </div>
+
+    <!-- Mac -->
+    <div class="panel" id="panel-mac" role="tabpanel" aria-labelledby="tab-mac">
+      <h3 class="panel-title">Mac test version · Apple silicon (M1 or later)</h3>
+      <div class="steps">
+        <div class="step">
+          <div class="step-head"><span class="num">1</span><h4>Download Hot Mic</h4></div>
+          <p>Select <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/download/mac-preview/HotMic-Mac.dmg">Download for Mac</a>, then open <b>HotMic-Mac.dmg</b> from your Downloads folder and drag <b>Hot Mic</b> onto <b>Applications</b>.</p>
+        </div>
+        <div class="step has-shot">
+          <div class="text">
+            <div class="step-head"><span class="num">2</span><h4>Allow it to open</h4></div>
+            <p>Open Hot Mic from Applications. macOS may say it couldn’t verify Hot Mic. Select <b>Done</b>, then:</p>
+            <ol class="sub">
+              <li>Open <b>Apple menu › System Settings › Privacy &amp; Security</b>.</li>
+              <li>Under <b>Security</b>, select <b>Open Anyway</b> next to “Hot Mic” was blocked.</li>
+              <li>Enter your Mac password, then select <b>Open Anyway</b> again.</li>
+            </ol>
+            <p class="why">This message appears because Hot Mic is new and not yet registered with Apple. It doesn’t mean anything is wrong. The Open Anyway button shows for about an hour after opening Hot Mic.</p>
+          </div>
+          <div aria-hidden="true" class="shot mac">
+            <div style="font-size: 11.5px; font-weight: 700; color: #6E6E73">Security</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #FFFFFF; border-radius: 8px; padding: 10px 12px">
+              <span style="font-size: 12px">“Hot Mic” was blocked to protect your Mac.</span>
+              <span style="background: #FFFFFF; border: 1px solid #C7C7CC; border-radius: 6px; padding: 4px 10px; font-size: 12px; white-space: nowrap; outline: 2px solid #C0A062; outline-offset: 2px">Open Anyway</span>
+            </div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-head"><span class="num">3</span><h4>Finish in the Welcome window</h4></div>
+          <p>Allow the <b>Microphone</b>, turn on Hot Mic under <b>Accessibility</b> (so it can notice its key and type), then select <b>Download</b>. The free AI models (about 1.3 GB) download once.</p>
+        </div>
+        <div class="step">
+          <div class="step-head"><span class="num">4</span><h4>Start dictating</h4></div>
+          <p>Place the cursor in any app, press <span class="key">right ⌥ Option</span>, speak, and press it again.</p>
+          <p class="why">The test version doesn’t update itself yet. <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/tag/mac-preview">Release notes and known limits</a>.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Needs + other downloads -->
-  <section style="max-width: 1080px; margin: 0 auto; padding: 48px 24px 88px; display: flex; flex-wrap: wrap; gap: 20px">
-    <div style="flex: 1 1 440px; background: #1A2333; border-top: 1px solid #C0A062; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-      <div style="font-size: 13px; letter-spacing: 0.32em; color: #C0A062">SYSTEM REQUIREMENTS</div>
-      <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; font-size: 16px; line-height: 1.5; color: #B4AFA2">
-        <li>Windows 10 or Windows 11, 64-bit</li>
-        <li>Mac (test version): Apple silicon (M1 or later) with macOS 14 Sonoma or later</li>
-        <li>A microphone: a headset, webcam or built-in laptop microphone</li>
-        <li>About 2 GB of free disk space for the AI models</li>
-        <li>On Windows, a dedicated graphics card is optional and improves speed</li>
+  <!-- Requirements + more -->
+  <section style="max-width: 1080px; margin: 0 auto; padding: 32px 24px 88px; display: flex; flex-wrap: wrap; gap: 20px">
+    <div class="card">
+      <div class="eyebrow">SYSTEM REQUIREMENTS</div>
+      <ul>
+        <li><b>Windows:</b> Windows 10 or 11, 64-bit. A graphics card is optional and makes it faster.</li>
+        <li><b>Mac:</b> Apple silicon (M1 or later) with macOS 14 Sonoma or later. Apple menu › About This Mac shows the chip.</li>
+        <li><b>Both:</b> a microphone (headset, webcam or built-in) and about 2 GB of free disk space for the AI models.</li>
       </ul>
     </div>
-    <div style="flex: 1 1 440px; background: #1A2333; border-top: 1px solid #C0A062; border-radius: 6px; padding: 28px; display: flex; flex-direction: column; gap: 14px">
-      <div style="font-size: 13px; letter-spacing: 0.32em; color: #C0A062">OTHER DOWNLOADS</div>
-      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4AFA2"><a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/latest/download/HotMic.exe">HotMic.exe</a>: the complete application as a single file, for use without installation. This version does not update automatically.</p>
-      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4AFA2"><a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/tag/mac-preview">Mac test version</a>: release notes and known limits.</p>
-      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4AFA2"><a href="https://github.com/mcsyme11-byte/HotMic-releases/releases">All versions and release notes</a> · <a href="settings-guide.html">Settings guide</a>: what each setting does, and the best settings for each kind of computer</p>
-      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #B4AFA2">Installed copies update automatically. To uninstall, open Windows Settings › Apps › Installed apps › Hot Mic › Uninstall.</p>
+    <div class="card">
+      <div class="eyebrow">MORE</div>
+      <ul>
+        <li><a href="settings-guide.html">Settings guide</a>: what each setting does, and the best settings for each kind of computer.</li>
+        <li><a href="https://github.com/mcsyme11-byte/HotMic-releases/releases">All versions and release notes</a>.</li>
+        <li><a href="https://github.com/mcsyme11-byte/HotMic-releases/releases/latest/download/HotMic.exe">HotMic.exe</a>: Windows without installing, as a single file. It doesn’t update itself.</li>
+        <li><b>Uninstalling:</b> on Windows, Settings › Apps › Installed apps › Hot Mic › Uninstall. On a Mac, drag Hot Mic from Applications to the Trash.</li>
+      </ul>
     </div>
   </section>
 
@@ -283,10 +310,34 @@ a:focus-visible,button:focus-visible{outline:2px solid #EDE6D3;outline-offset:3p
   <footer style="border-top: 1px solid #2A3446; background: #0F1520">
     <div style="max-width: 1080px; margin: 0 auto; padding: 30px 24px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; font-size: 14px; color: #98A0AB">
       <span>Hot Mic © 2026 Malcolm Syme · <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a></span>
-      <nav aria-label="Legal" style="display: flex; flex-wrap: wrap; gap: 18px"><a href="settings-guide.html">Settings Guide</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms of Use</a><a href="https://github.com/mcsyme11-byte/HotMic-releases/blob/main/THIRD-PARTY-NOTICES.md">Third-party notices</a></nav>
+      <nav aria-label="More" style="display: flex; flex-wrap: wrap; gap: 18px"><a href="settings-guide.html">Settings guide</a><a href="legal.html">Legal</a></nav>
     </div>
   </footer>
 </div>
 
+<script>
+// Installing: show one computer's steps at a time (Mac first on a Mac). Without scripts both are shown.
+(function () {
+  document.documentElement.classList.add('js');
+  var tabs = [document.getElementById('tab-win'), document.getElementById('tab-mac')];
+  function choose(i, focus) {
+    tabs.forEach(function (t, j) {
+      t.setAttribute('aria-selected', i === j ? 'true' : 'false');
+      t.tabIndex = i === j ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = i !== j;
+    });
+    if (focus) tabs[i].focus();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { choose(i, false); });
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') { e.preventDefault(); choose(1 - i, true); }
+    });
+  });
+  var onMac = /Mac/.test(navigator.platform || navigator.userAgent) && !/iPhone|iPad/.test(navigator.userAgent);
+  choose(location.hash === '#mac' || onMac ? 1 : 0, false);
+  if (location.hash === '#mac') document.getElementById('install').scrollIntoView();
+})();
+</script>
 </body>
 </html>
