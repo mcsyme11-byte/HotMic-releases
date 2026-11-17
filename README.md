@@ -1,3 +1,5 @@
+<p align="center"><img src="hot-mic-patch.svg" width="140" height="140" alt="Hot Mic mission patch"></p>
+
 # Hot Mic
 
 **Free, private dictation for Windows, with a Mac test version.** Press **F9** (on a Mac, **right ⌥ Option**), speak, and press it again: clean, punctuated text appears at the cursor in any application, including Microsoft Word, web browsers, Discord and email.
@@ -86,4 +88,4 @@ Questions and problem reports may be sent to **Malcolm Syme** at [mcsyme11@gmail
 
 ---
 
-Hot Mic © 2026 Malcolm Syme. All rights reserved.
+Hot Mic © 2026 Malcolm Syme · mcsyme11@gmail.com. All rights reserved. Hot Mic and the Hot Mic patch are trademarks of Malcolm Syme.

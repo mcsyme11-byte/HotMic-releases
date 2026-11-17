@@ -25,6 +25,13 @@ Hot Mic is built on these free and open-source projects. Thank you to their auth
 | .NET runtime and Windows Forms | MIT | <https://github.com/dotnet/runtime> |
 | Microsoft Edge WebView2 SDK (draws the Settings and Welcome windows) | BSD-3-Clause | <https://www.nuget.org/packages/Microsoft.Web.WebView2> |
 
+## Logo artwork
+
+| Part | Licence | Source |
+|---|---|---|
+| The mic in the centre of the Hot Mic logo: Lucide's "mic" icon, Copyright (c) Lucide Contributors 2022; portions Copyright (c) 2013-2022 Cole Bemis (Feather) | ISC | <https://lucide.dev> |
+| Gelasio (the letters of the logo's ring text, turned into shapes; the font itself isn't included) | SIL Open Font License 1.1 | <https://github.com/SorkinType/Gelasio> |
+
 ## Ideas and techniques
 
 - The careful clipboard handling (private clipboard formats, delayed rendering, admin-window detection) follows the approach documented by the `win-text-inject` project.
