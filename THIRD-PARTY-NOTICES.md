@@ -1,3 +1,5 @@
+<p align="center"><img src="brand/export/hot-mic-patch-128.png" width="96" height="96" alt="Hot Mic mission patch"></p>
+
 # Third-party notices
 
 Hot Mic is built on these free and open-source projects. Thank you to their authors.
@@ -36,3 +38,5 @@ Hot Mic is built on these free and open-source projects. Thank you to their auth
 
 - The careful clipboard handling (private clipboard formats, delayed rendering, admin-window detection) follows the approach documented by the `win-text-inject` project.
 - The two-stage cleanup design (instant rules first, then a small model) follows the SpeakoFlow Mini model card.
+
+<p align="center"><sub>Hot Mic · © 2026 Malcolm Syme · <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a><br>Hot Mic and the Hot Mic patch are trademarks of Malcolm Syme.</sub></p>

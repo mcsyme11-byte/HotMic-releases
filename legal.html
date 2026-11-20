@@ -9,17 +9,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' role='img' aria-label='Hot Mic'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23141B26' stroke='%23C0A062' stroke-width='9'/%3E%3Cg transform='translate(20 19) scale(2.5)' fill='none' stroke='%23EDE6D3' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z M18 11v1a6 6 0 0 1-12 0v-1 M12 18v3'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Hot Mic · Legal · © 2026 Malcolm Syme · mcsyme11@gmail.com -->
+<link rel="stylesheet" href="site.css">
 <style>
-body{margin:0;background:#141B26;color:#EDE6D3;font-family:Georgia,'Times New Roman',serif}
-a{color:#E2C88E}a:hover{color:#EDE6D3}
-a:focus-visible{outline:2px solid #EDE6D3;outline-offset:3px}
-.bar{border-bottom:1px solid #2A3446;background:#0F1520}
-.wrap{max-width:780px;margin:0 auto;padding:0 24px}
-.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px}
-.brand{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.32em;color:#C0A062;text-decoration:none}
-.eyebrow{font-size:13px;letter-spacing:.32em;color:#C0A062;margin-top:72px}
-h1{font-weight:normal;font-size:46px;line-height:1.1;margin:12px 0 10px}
-.meta{font-style:italic;color:#98A0AB;font-size:15px;margin:0 0 40px}
 .summary{background:#1A2333;border-top:1px solid #C0A062;border-radius:6px;padding:24px 28px;margin-bottom:44px}
 .summary p{margin:0;font-size:18px;line-height:1.6;color:#EDE6D3}
 h2{font-weight:normal;font-size:26px;margin:44px 0 12px;padding-top:20px;border-top:1px solid #2A3446}
@@ -27,9 +18,6 @@ p,li{font-size:17px;line-height:1.7;color:#B4AFA2}
 li{margin-bottom:8px}
 strong{color:#EDE6D3;font-weight:normal}
 .caps{font-size:15px;letter-spacing:.02em}
-.foot{border-top:1px solid #2A3446;background:#0F1520;margin-top:88px}
-.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding:30px 24px;font-size:14px;color:#98A0AB}
-.foot nav{display:flex;flex-wrap:wrap;gap:18px}
 .docs{display:flex;flex-direction:column;gap:16px;margin:8px 0 0}
 .doc{display:flex;align-items:center;gap:18px;background:#1A2333;border-top:1px solid #C0A062;border-radius:6px;padding:22px 24px;text-decoration:none;color:#EDE6D3}
 .doc:hover{background:#202B3E;color:#EDE6D3}
@@ -38,27 +26,28 @@ strong{color:#EDE6D3;font-weight:normal}
 .doc span.name{font-size:22px}
 .doc span.what{font-size:16px;line-height:1.55;color:#B4AFA2}
 .doc .go{color:#C0A062;flex:none}
-@media (max-width:600px){h1{font-size:36px}}
-.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:28px;font-size:16px;text-decoration:none}
-.back + .eyebrow{margin-top:28px}
 </style>
 </head>
 <body>
-<header class="bar">
-  <div class="wrap top">
-    <a class="brand" href="./">
-      <!-- MARK-START --><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="#141B26" stroke="#C0A062" stroke-width="9"/><g transform="translate(20 19) scale(2.5)" fill="none" stroke="#EDE6D3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z M18 11v1a6 6 0 0 1-12 0v-1 M12 18v3"/></g></svg><!-- MARK-END -->
-      HOT MIC
-    </a>
-    <a href="./" style="font-size:15px;text-decoration:none">Download</a>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-head">
+  <div class="site-in">
+    <a class="brand" href="./"><!-- MARK-START --><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="#141B26" stroke="#C0A062" stroke-width="9"/><g transform="translate(20 19) scale(2.5)" fill="none" stroke="#EDE6D3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z M18 11v1a6 6 0 0 1-12 0v-1 M12 18v3"/></g></svg><!-- MARK-END --><span>Hot Mic</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="wide-only" href="./#how">How it works</a>
+      <a class="wide-only" href="./#install">Installing</a>
+      <a href="settings-guide.html">Settings guide</a>
+      <a href="report.html">Get help</a>
+      <a class="nav-cta" href="./#download">Download</a>
+    </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main class="page" id="main">
   <a class="back" href="./"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>Back to Hot Mic</a>
-  <div class="eyebrow">LEGAL</div>
+  <div class="page-head"><div class="eyebrow">LEGAL</div>
   <h1>Legal</h1>
-  <p class="meta">The terms for using Hot Mic, how it handles your data, and the open-source parts it's built on.</p>
+  <p class="meta">The terms for using Hot Mic, how it handles your data, and the open-source parts it's built on.</p></div>
 
   <div class="docs">
     <a class="doc" href="terms.html">
@@ -79,13 +68,36 @@ strong{color:#EDE6D3;font-weight:normal}
   <p>Questions about any of these may be sent to Malcolm Syme at <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a>.</p>
 </main>
 
-<footer class="foot">
-  <div class="wrap">
-    <span>Hot Mic © 2026 Malcolm Syme · <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a> · Hot Mic and the Hot Mic patch are trademarks of Malcolm Syme</span>
-    <nav aria-label="More">
-      <a href="settings-guide.html">Settings guide</a>
-      <a href="legal.html" aria-current="page">Legal</a>
-    </nav>
+<footer class="site-foot">
+  <div class="site-in">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="./"><!-- MARK-START --><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="#141B26" stroke="#C0A062" stroke-width="9"/><g transform="translate(20 19) scale(2.5)" fill="none" stroke="#EDE6D3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z M18 11v1a6 6 0 0 1-12 0v-1 M12 18v3"/></g></svg><!-- MARK-END --><span>Hot Mic</span></a>
+        <span>Free dictation that runs entirely on your own computer. Built for low vision first.</span>
+      </div>
+      <nav class="foot-col" aria-label="Hot Mic">
+        <div class="eyebrow">Hot Mic</div>
+        <a href="./#download">Download</a>
+        <a href="./#install">Installing</a>
+        <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases">All versions</a>
+      </nav>
+      <nav class="foot-col" aria-label="Help">
+        <div class="eyebrow">Help</div>
+        <a href="settings-guide.html">Settings guide</a>
+        <a href="report.html">Report a problem</a>
+        <a href="mailto:mcsyme11@gmail.com">Email</a>
+      </nav>
+      <nav class="foot-col" aria-label="Legal">
+        <div class="eyebrow">Legal</div>
+        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="legal.html">All legal</a>
+      </nav>
+    </div>
+    <div class="foot-credit">
+      <span>Hot Mic · © 2026 Malcolm Syme · <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a></span>
+      <span>Hot Mic and the Hot Mic patch are trademarks of Malcolm Syme.</span>
+    </div>
   </div>
 </footer>
 </body>

@@ -9,17 +9,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' role='img' aria-label='Hot Mic'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23141B26' stroke='%23C0A062' stroke-width='9'/%3E%3Cg transform='translate(20 19) scale(2.5)' fill='none' stroke='%23EDE6D3' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z M18 11v1a6 6 0 0 1-12 0v-1 M12 18v3'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Hot Mic · Settings Guide · © 2026 Malcolm Syme · mcsyme11@gmail.com -->
+<link rel="stylesheet" href="site.css">
 <style>
-body{margin:0;background:#141B26;color:#EDE6D3;font-family:Georgia,'Times New Roman',serif}
-a{color:#E2C88E}a:hover{color:#EDE6D3}
-a:focus-visible{outline:2px solid #EDE6D3;outline-offset:3px}
-.bar{border-bottom:1px solid #2A3446;background:#0F1520}
-.wrap{max-width:900px;margin:0 auto;padding:0 24px}
-.top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:18px 24px}
-.brand{display:flex;align-items:center;gap:12px;font-size:13px;letter-spacing:.32em;color:#C0A062;text-decoration:none}
-.eyebrow{font-size:13px;letter-spacing:.32em;color:#C0A062;margin-top:72px}
-h1{font-weight:normal;font-size:46px;line-height:1.1;margin:12px 0 10px}
-.meta{font-style:italic;color:#98A0AB;font-size:15px;margin:0 0 40px}
 .summary{background:#1A2333;border-top:1px solid #C0A062;border-radius:6px;padding:24px 28px;margin-bottom:12px}
 .summary p{margin:0;font-size:18px;line-height:1.6;color:#EDE6D3}
 h2{font-weight:normal;font-size:28px;margin:56px 0 8px;padding-top:24px;border-top:1px solid #2A3446}
@@ -43,38 +34,36 @@ strong{color:#EDE6D3;font-weight:normal}
 kbd{font-family:inherit;color:#EDE6D3;border:1px solid #3A465C;border-radius:3px;padding:1px 7px;font-size:15px;white-space:nowrap}
 .note{background:#1A2333;border-left:2px solid #C0A062;border-radius:4px;padding:14px 18px;margin:18px 0 0}
 .note p{margin:0;font-size:16px}
-.foot{border-top:1px solid #2A3446;background:#0F1520;margin-top:88px}
-.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;padding:30px 24px;font-size:14px;color:#98A0AB}
-.foot nav{display:flex;flex-wrap:wrap;gap:18px}
 @media (max-width:640px){
-  h1{font-size:36px}
   .opt{grid-template-columns:1fr;gap:2px}
   .opt.head{display:none}
   .opt .def::before{content:"Default: "}
 }
-.back{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:28px;font-size:16px;text-decoration:none}
-.back + .eyebrow{margin-top:28px}
 </style>
 </head>
 <body>
-<header class="bar">
-  <div class="wrap top">
-    <a class="brand" href="./">
-      <!-- MARK-START --><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="#141B26" stroke="#C0A062" stroke-width="9"/><g transform="translate(20 19) scale(2.5)" fill="none" stroke="#EDE6D3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z M18 11v1a6 6 0 0 1-12 0v-1 M12 18v3"/></g></svg><!-- MARK-END -->
-      HOT MIC
-    </a>
-    <a href="./" style="font-size:15px;text-decoration:none">Download</a>
+<a class="skip" href="#main">Skip to the content</a>
+<header class="site-head">
+  <div class="site-in">
+    <a class="brand" href="./"><!-- MARK-START --><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="#141B26" stroke="#C0A062" stroke-width="9"/><g transform="translate(20 19) scale(2.5)" fill="none" stroke="#EDE6D3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z M18 11v1a6 6 0 0 1-12 0v-1 M12 18v3"/></g></svg><!-- MARK-END --><span>Hot Mic</span></a>
+    <nav class="site-nav" aria-label="Main">
+      <a class="wide-only" href="./#how">How it works</a>
+      <a class="wide-only" href="./#install">Installing</a>
+      <a href="settings-guide.html" aria-current="page">Settings guide</a>
+      <a href="report.html">Get help</a>
+      <a class="nav-cta" href="./#download">Download</a>
+    </nav>
   </div>
 </header>
 
-<main class="wrap">
+<main class="page" id="main">
   <a class="back" href="./"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"></path></svg>Back to Hot Mic</a>
-  <div class="eyebrow">GUIDE</div>
+  <div class="page-head"><div class="eyebrow">GUIDE</div>
   <h1>Settings Guide</h1>
-  <p class="meta">For Hot Mic 0.5.6 and later on Windows</p>
+  <p class="meta">For Hot Mic 0.5.9 and later on Windows</p></div>
 
   <div class="summary">
-    <p>Hot Mic works well without changing anything. This guide explains each setting, and suggests the settings that suit common computers and needs. To open Settings, right-click the microphone icon near the clock (it may be behind the <kbd>^</kbd> arrow) and choose <strong>Settings</strong>.</p>
+    <p>Hot Mic works well without changing anything. This guide explains each setting, and suggests the settings that suit common computers and needs. To open Settings, right-click the microphone icon near the clock (it may be behind the <kbd>^</kbd> arrow) and choose <strong>Settings</strong>. Settings opens on <strong>Home</strong>: whether Hot Mic is ready, your key and microphone at a glance, and updates.</p>
   </div>
 
   <h2 id="recommended">Recommended settings</h2>
@@ -139,7 +128,7 @@ kbd{font-family:inherit;color:#EDE6D3;border:1px solid #3A465C;border-radius:3px
     </section>
     <section class="setup">
       <div class="for">CHAT APPS</div>
-      <h3>Discord, Messages and similar</h3>
+      <h3>Chat and messaging apps</h3>
       <p style="margin:0;font-size:16px">For sending messages hands-free.</p>
       <ul>
         <li><strong>Voice command “press enter”:</strong> on (the default). Saying “press enter” at the very end sends the message.</li>
@@ -152,6 +141,14 @@ kbd{font-family:inherit;color:#EDE6D3;border:1px solid #3A465C;border-radius:3px
 
   <h2 id="every-setting">Every setting</h2>
   <p class="lead">Grouped by the tabs in the Settings window.</p>
+
+  <section class="tab" aria-labelledby="t-home">
+    <h3 id="t-home">Home</h3>
+    <div class="opt head"><div>SETTING</div><div>WHAT IT DOES</div><div>DEFAULT</div></div>
+    <div class="opt"><div class="name">Update now</div><div class="what">Shown when a new version is ready. Hot Mic saves the settings, closes for about 15 seconds and starts again on the new version. The tray menu has the same <strong>Update now</strong> at the top, and the notice that says an update is ready can be clicked too.</div><div class="def">—</div></div>
+    <div class="opt"><div class="name">Check for updates</div><div class="what">Looks for a new version straight away. Hot Mic also checks by itself after it starts and every few hours.</div><div class="def">—</div></div>
+    <div class="opt"><div class="name">Install updates by themselves</div><div class="what">When the computer has been left alone for 10 minutes, a ready update is installed by itself: never while dictating, while a game or flight simulator is running, or while Settings is open. When off, it is installed the next time Hot Mic starts.</div><div class="def">On</div></div>
+  </section>
 
   <section class="tab" aria-labelledby="t-basics">
     <h3 id="t-basics">Basics</h3>
@@ -239,13 +236,36 @@ kbd{font-family:inherit;color:#EDE6D3;border:1px solid #3A465C;border-radius:3px
   <p>Questions and feedback are welcome at <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a>.</p>
 </main>
 
-<footer class="foot">
-  <div class="wrap">
-    <span>Hot Mic © 2026 Malcolm Syme · <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a> · Hot Mic and the Hot Mic patch are trademarks of Malcolm Syme</span>
-    <nav aria-label="More">
-      <a href="settings-guide.html" aria-current="page">Settings guide</a>
-      <a href="legal.html">Legal</a>
-    </nav>
+<footer class="site-foot">
+  <div class="site-in">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a class="brand" href="./"><!-- MARK-START --><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="45" fill="#141B26" stroke="#C0A062" stroke-width="9"/><g transform="translate(20 19) scale(2.5)" fill="none" stroke="#EDE6D3" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a3 3 0 0 0-3 3v6a3 3 0 0 0 6 0V6a3 3 0 0 0-3-3z M18 11v1a6 6 0 0 1-12 0v-1 M12 18v3"/></g></svg><!-- MARK-END --><span>Hot Mic</span></a>
+        <span>Free dictation that runs entirely on your own computer. Built for low vision first.</span>
+      </div>
+      <nav class="foot-col" aria-label="Hot Mic">
+        <div class="eyebrow">Hot Mic</div>
+        <a href="./#download">Download</a>
+        <a href="./#install">Installing</a>
+        <a href="https://github.com/mcsyme11-byte/HotMic-releases/releases">All versions</a>
+      </nav>
+      <nav class="foot-col" aria-label="Help">
+        <div class="eyebrow">Help</div>
+        <a href="settings-guide.html">Settings guide</a>
+        <a href="report.html">Report a problem</a>
+        <a href="mailto:mcsyme11@gmail.com">Email</a>
+      </nav>
+      <nav class="foot-col" aria-label="Legal">
+        <div class="eyebrow">Legal</div>
+        <a href="terms.html">Terms of Use</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="legal.html">All legal</a>
+      </nav>
+    </div>
+    <div class="foot-credit">
+      <span>Hot Mic · © 2026 Malcolm Syme · <a href="mailto:mcsyme11@gmail.com">mcsyme11@gmail.com</a></span>
+      <span>Hot Mic and the Hot Mic patch are trademarks of Malcolm Syme.</span>
+    </div>
   </div>
 </footer>
 </body>
